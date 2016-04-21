@@ -4,6 +4,9 @@
 <body>
     <div th:replace="fragments/header :: header"/>
 
+	<div class="container">
+		<a th:href="@{addbook}" th:text="Add"/>
+	</div>
     <div class="container">
         <table class="table table-stripped" style="width:600px;">
             <thead>

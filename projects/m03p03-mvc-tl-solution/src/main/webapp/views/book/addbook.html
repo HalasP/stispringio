@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:substituteby="fragments/headTag :: headTag"/>
+<body>
+    <div th:replace="fragments/header :: header"/>
+    <div class="container">
+    <form action="#" th:action="@{/processForm}" th:object="${book}" method="post">
+	    <ul>
+	  		<li>   
+	  		 <label>Title:</label>          
+		     <input type="text" th:field="*{title}" />
+		  	</li>
+  			<li>
+  			 <label>Author:</label>
+		     <input type="text" th:field="*{author}"/>
+		 	</li>
+		 	<li>
+		 	 <label>Publisher:</label>
+		     <input type="text" th:field="*{publisher}"/>
+			</li>
+  			<li>
+  			 <label>Genre:</label>
+		     <input type="text" th:field="*{genre}"/>
+			</li>
+  			<li>
+  			 <label>ISBN:</label>
+		     <input type="text" th:field="*{isbn}"/>
+			</li>
+  			<li>
+  			 <label>CatId:</label>
+		     <input type="text" th:field="*{catId}"/>
+		 	</li>
+  			<li>
+			<input type="submit" />
+		  </li>
+		</ul>
+	</form>
+    </div>
+    <div th:substituteby="fragments/footer :: footer"/>
+
+
+</body>
+</html>

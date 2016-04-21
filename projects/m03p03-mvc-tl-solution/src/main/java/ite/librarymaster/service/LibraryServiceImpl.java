@@ -31,4 +31,10 @@ public class LibraryServiceImpl implements LibraryService{
         }
         return book;
     }
+
+	@Override
+	public void saveBook(Book book) {
+		bookRepository.saveBook(book);
+	}
+
 }
